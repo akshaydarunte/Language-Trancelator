@@ -1,11 +1,13 @@
 import streamlit as st
 from googletrans import Translator, LANGUAGES 
 
+# Function to trancelate language
 def translate_sentence(sentence, target_language):
     translator = Translator()
     translation = translator.translate(sentence, dest=target_language)
     return translation.text
 
+# Function to detect input language
 def detect_language(sentence):
     translator = Translator()
     try:
